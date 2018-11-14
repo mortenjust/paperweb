@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_9" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Paperweb" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4dK-sy-O76">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                            <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nW8-Xk-Xnt" userLabel="hider">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="pol" translatesAutoresizingMaskIntoConstraints="NO" id="hYU-Wj-nHJ">
+                                        <rect key="frame" x="67" y="269" width="240" height="128"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="28Z-hE-0Gc" userLabel="Menu">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="121"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" spacing="22" translatesAutoresizingMaskIntoConstraints="NO" id="3Gh-Ms-gYy" userLabel="top">
+                                        <rect key="frame" x="16" y="83" width="343" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tHB-4q-SYx">
+                                                <rect key="frame" x="0.0" y="0.0" width="58" height="30"/>
+                                                <state key="normal" title="Politiken"/>
+                                                <connections>
+                                                    <action selector="polPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="RDP-qu-5lf"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pdE-Lk-NX2">
+                                                <rect key="frame" x="80" y="0.0" width="72" height="30"/>
+                                                <state key="normal" title="Berlingske"/>
+                                                <connections>
+                                                    <action selector="bPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BTN-Hk-rSo"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H11-PA-srV">
+                                                <rect key="frame" x="174" y="0.0" width="108" height="30"/>
+                                                <state key="normal" title="Weekendavisen"/>
+                                                <connections>
+                                                    <action selector="waPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mbS-V4-s2H"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vIf-4N-yxI">
+                                                <rect key="frame" x="304" y="0.0" width="39" height="30"/>
+                                                <state key="normal" title="Close"/>
+                                                <connections>
+                                                    <action selector="closeButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="RQV-wJ-9v7"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="infoDark" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="btF-7S-R6L">
+                                <rect key="frame" x="35" y="11" width="22" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="menuButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4AM-ne-oyi"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="4dK-sy-O76" firstAttribute="bottom" secondItem="8bC-Xf-vdC" secondAttribute="bottom" id="20B-W7-Ykz"/>
+                            <constraint firstItem="4dK-sy-O76" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailing" id="DaC-Zm-fhg"/>
+                            <constraint firstItem="nW8-Xk-Xnt" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailing" id="O50-ZP-SBu"/>
+                            <constraint firstItem="4dK-sy-O76" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="bZE-oQ-7BF"/>
+                            <constraint firstItem="nW8-Xk-Xnt" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="c41-wI-nVd"/>
+                            <constraint firstItem="nW8-Xk-Xnt" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="f1r-o4-IeR"/>
+                            <constraint firstItem="4dK-sy-O76" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="mH0-k3-Kdb"/>
+                            <constraint firstItem="nW8-Xk-Xnt" firstAttribute="bottom" secondItem="8bC-Xf-vdC" secondAttribute="bottom" id="xIS-Q4-gZA"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="hider" destination="nW8-Xk-Xnt" id="HDC-qA-6cQ"/>
+                        <outlet property="menu" destination="28Z-hE-0Gc" id="reh-Jl-Ts4"/>
+                        <outlet property="webView" destination="4dK-sy-O76" id="kk5-ns-53S"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="132.26600985221674"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="pol" width="2517" height="771"/>
+    </resources>
+</document>
